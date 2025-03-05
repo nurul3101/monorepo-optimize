@@ -139,9 +139,7 @@ const config = {
         "native": true
       }
     ],
-    "previewFeatures": [
-      "tracing"
-    ],
+    "previewFeatures": [],
     "sourceFilePath": "/Users/nurulsundarani/Documents/Prisma/monorepo-optimize/packages/database/prisma/schema.prisma",
     "isCustomOutput": true
   },
@@ -165,8 +163,8 @@ const config = {
       }
     }
   },
-  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\ngenerator client {\n  provider        = \"prisma-client-js\"\n  output          = \"../generated/client\"\n  previewFeatures = [\"tracing\"]\n}\n\nmodel User {\n  id        Int      @id @default(autoincrement())\n  createdAt DateTime @default(now())\n  email     String   @unique\n  name      String?\n}\n",
-  "inlineSchemaHash": "984a3bf5f74fa5b7745dfbdfe8d7f13c5c1ffdb5df5c9da76fd43f63cf7ab7a7",
+  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\ngenerator client {\n  provider = \"prisma-client-js\"\n  output   = \"../generated/client\"\n}\n\nmodel User {\n  id        Int      @id @default(autoincrement())\n  createdAt DateTime @default(now())\n  email     String   @unique\n  name      String?\n}\n",
+  "inlineSchemaHash": "15b13a38d30b24017b62fc7ac899f6cf1f58d25d0af9646106ad198179f88bb8",
   "copyEngine": true
 }
 config.dirname = '/'
